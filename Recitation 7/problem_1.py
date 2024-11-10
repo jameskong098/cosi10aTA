@@ -4,7 +4,6 @@ def calcDet(matrix):
     c, d = matrix[1][0], matrix[1][1]
     return a * d - b * c
 
-
 def main():
     # Example 2x2 matrix
     matrix = [
