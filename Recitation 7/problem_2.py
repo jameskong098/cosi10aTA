@@ -24,10 +24,6 @@ def main():
         [2, 6]
     ]
     
-    # Calculate determinant
-    det = calcDet(matrix)
-    print("Determinant:", det)
-    
     # Calculate inverse
     inv_matrix = inverse(matrix)
     print("Inverse Matrix:")
