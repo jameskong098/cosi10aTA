@@ -46,11 +46,10 @@ def main():
 
         course_num = input("\nSelect a course: ")
         # Loop through the sections of the selected course and print them
-        for section_num in found_courses[course_num]:
+        for section_num, section in found_courses[course_num].items():
             # Get the current section using section_num as the key (as section_num only represents the section number not the actual section dictionary)
-            cur_section = found_courses[course_num][section_num]
             print(f"\n{department} {course_num} - {section_num}")
-            print(f"Name: {cur_section['name']}, Type: {cur_section['format']}, Instructor: {cur_section['instructor']}, Students: {cur_section['num_enrolled']}\n")
+            print(f"Name: {section['name']}, Type: {section['format']}, Instructor: {section['instructor']}, Students: {section['num_enrolled']}\n")
         
         continue_search = input('Type "stop" to stop searching, otherwise hit enter: ')
         if continue_search == 'stop':
