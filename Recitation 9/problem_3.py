@@ -18,7 +18,8 @@ def read_courses(file_path):
             if course_num not in courses[semester][department]:
                 courses[semester][department][course_num] = {}
 
-            # By now, we know that the semester, department, and course_num keys exist in the dictionary so we can add the section key
+            # By now, we know that the semester, department, and course_num keys 
+            # exist in the dictionary so we can add the section key
             courses[semester][department][course_num][section] = {
                 'name': title,
                 'format': format,
@@ -26,6 +27,12 @@ def read_courses(file_path):
                 'code': code,
                 'num_enrolled': num_enrolled
             }
+
+            courses[semester][department][course_num][section]['name']
+            courses[semester][department][course_num][section]['format']
+            courses[semester][department][course_num][section]['instructor']
+            courses[semester][department][course_num][section]['code']
+            courses[semester][department][course_num][section]['num_enrolled']
 
     return courses
 
@@ -47,7 +54,8 @@ def main():
         course_num = input("\nSelect a course: ")
         # Loop through the sections of the selected course and print them
         for section_num, section in found_courses[course_num].items():
-            # Get the current section using section_num as the key (as section_num only represents the section number not the actual section dictionary)
+            # Get the current section using section_num as the key (as section_num only represents the section number not the actual 
+            # section dictionary)
             print(f"\n{department} {course_num} - {section_num}")
             print(f"Name: {section['name']}, Type: {section['format']}, Instructor: {section['instructor']}, Students: {section['num_enrolled']}\n")
         
