@@ -1,6 +1,6 @@
 
 def read_courses(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path) as file:
         courses = {}
 
         lines = file.readlines()
